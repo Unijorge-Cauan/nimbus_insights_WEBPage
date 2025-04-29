@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Playwrite+AU+SA:wght@291&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body{
+    background-color: white;
+    color: black;
+}
+
+header{
+    background: url(assets/backgroundImageNimbus.png);
+    background-size: cover;
+    background-position: center;
+    height: 715px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuLogo{
+    width: 112px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+.menuLinks{
+    display: flex;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.menuLinks :hover{
+    background-color: #fffffd;
+    color: #0b2a49;
+} /*ver o hover*/
+
+.link{
+    text-decoration: none;
+    color: #fffffd;
+    margin: 20px;
+}
+
+
+.menuToggle{
+    width: 32px;
+    height: 30px;
+    background-color:#3495c8;
+    color: #76dfff;
+    border-radius: 25px;
+    border-color: #3495c8;
+} /*deixar transparente*/
+
+.inicio h1{
+    color: #ffbf00;
+    margin-top: 260px;
+    margin-left: 100px;
+    font-size: 100px;
+}
+
+.inicio p{
+    color: #fffffd;
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+.sobre{
+    background-color: #0b2a49;
+    height:950px;
+}
+
+
+.sobre h2{
+    color: #ffbf00;
+    font-size: 80px;
+}
+
+.sobre p{
+    color: #fffffd;
+    font-size: 30px;
+    
+}
+
+.servicoImagem{
+    width: 50px;
+    height: 100px;
+}
