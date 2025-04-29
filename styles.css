@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Playwrite+AU+SA:wght@291&display=swap');
 
 *{
@@ -92,3 +93,14 @@ nav{
     width: 50px;
     height: 100px;
 }
+=======
+body{
+    background-image: url(assets/backgroundImageNimbus.png);
+}
+
+header .img{
+    width: 150px;
+    height: 100px;
+
+}
+
