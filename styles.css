@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: white;
+    background-image: url(assets/backgroundImageNimbus.png);
     color: black;
 }
 
@@ -18,6 +18,12 @@ header{
     background-size: cover;
     background-position: center;
     height: 715px;
+}
+
+header .img{
+    width: 150px;
+    height: 100px;
+
 }
 
 nav{
@@ -39,8 +45,11 @@ nav{
 }
 
 .menuLinks :hover{
+    /* display: flex; */
     background-color: #fffffd;
     color: #0b2a49;
+    margin-right: 5px;
+    margin-top: 10px;
 } /*ver o hover*/
 
 .link{
@@ -73,14 +82,15 @@ nav{
 }
 
 .sobre{
-    background-color: #0b2a49;
-    height:950px;
+    /* height:950px; */
+    background-color: #0b2a499d;
 }
 
 
 .sobre h2{
     color: #ffbf00;
-    font-size: 80px;
+    font-size: 55px;
+    text-align: center;
 }
 
 .sobre p{
@@ -94,55 +104,55 @@ nav{
     height: 100px;
 }
 
-body{
-    background-image: url(assets/backgroundImageNimbus.png);
-}
 
-header .img{
-    width: 150px;
-    height: 100px;
-
-}
 
 /* CARROSSEL */
-carousel-container {
+.carousel-container {
     position: relative;
     overflow: hidden;
     max-width: 800px;
     margin: 0 auto;
-  }
+}
   
-  .carousel-slides {
+.carousel-slides {
     display: flex;
     transition: transform 0.4s ease;
-  }
+}
   
-  .carousel-item {
+.carousel-item {
     min-width: 100%;
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
-  }
-  
-  .carousel-control {
+}
+ 
+.carousel-item img{
+    width: 150px;
+    height: 150px;
+}
+
+.carousel-control {
+    position: relative;
+    z-index: 10;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #ffbf00; /* mostarda */
-    border: none;
-    padding: 10px 15px;
+    background-color: #ffbf00; 
     cursor: pointer;
     font-size: 1.5rem;
-    color: #0b2a49;            /* azul escuro */
+    color: #0b2a49;            
     border-radius: 50%;
     opacity: 0.8;
-  }
-  .carousel-control:hover {
+}
+
+.carousel-control:hover {
     opacity: 1;
   }
-  .carousel-control.prev {
+
+.carousel-control.prev {
     left: 10px;
-  }
-  .carousel-control.next {
+}
+
+.carousel-control.next {
     right: 10px;
-  }
+}
