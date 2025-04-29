@@ -11,12 +11,9 @@
 </head>
 
 <header class="menu">
-   
-    
     <nav>
-        
         <img class="menuLogo" src="assets/sideLogo.png" alt="sideLogo">
-
+        
         <ul type="none" class="menuLinks">      <!--container lista de botões (burguerMenu)-->
           
             <button class="menuToggle" type="button" aria-label="Abrir menu">   <!--botão para menu JS dentro de responsividade -->
@@ -24,12 +21,8 @@
             </button>   <!--Fim botão menuBurguer-->
 
  
-            <li>
-                <a class="link" href="#home">Home</a>
-            </li>
-            <li>
-                <a class="link" href="#about">About us</a>
-            </li>
+            <li><a class="link" href="#home">Home</a></li>
+            <li><a class="link" href="#about">About us</a></li>
             <li><a class="link" href="#services">Services</a></li>
             <li><a class="link" href="#projects">Projects</a></li>
             <li><a class="link" href="#contacts">Contact</a></li>
@@ -58,38 +51,56 @@
             </p>
         </div>
 
-        <div id="services">
-        <img class="servicoImagem" src="assets/icon_OrbitalDataSurvey.svg" alt="">
-            <h3>Levantamento de Dados Orbitais</h3>
-            <p>Aquisição de dados Sentinel, Landsat, ASTER, CHIRPS, MODIS e outras fontes globais.</p>
+        <div id="services" class="carousel-container"> <!--Container carrossel-->
+              <!--Botão "anterior"-->
+            <button class="carousel-control prev" aria-label="Anterior"><i class="bi bi-arrow-left-circle"></i></button>  
+            <div class="carousel-slides">
 
-            <img class="servicoImagem" src="assets/icon_geospatialCharacterization.svg" alt="">
-            <h3>Caracterização Geoespacial</h3>
-            <p>Precipitação, temperatura, relevo, declive, hipsometria, DEM e séries temporais.</p>
+                <div class="carousel-item"><!--Slides-->
+                    <img class="servicoImagem" src="assets/icon_OrbitalDataSurvey.svg" alt="">
+                    <h3>Levantamento de Dados Orbitais</h3>
+                    <p>Aquisição de dados Sentinel, Landsat, ASTER, CHIRPS, MODIS e outras fontes globais.</p>
+                </div>
 
-            <img class="servicoImagem" src="assets/icon_mineralExploration.svg" alt="">
-            <h3>Exploração Mineral</h3>
-            <p>Análises espectrais, PCA, ICA, índices minerais e métodos supervisionados e não supervisionados.</p>
-
-            <img class="servicoImagem" src="assets/icon_hydrographicStudies.svg" alt="">
-            <h3>Estudos Hidrográficos</h3>
-            <p>Delimitação de bacias hidrográficas, estudos de escoamento, análise de drenagem e detecção de áreas propensas a inundações.</p>
-
-            <img class="servicoImagem" src="assets/icon_enviromental.svg" alt="">
-            <h3>Monitoramento Ambiental</h3>
-            <p>Monitoramento de desmatamento, detecção de incêndios florestais, análise de erosão costeira e detecção de derramamentos de óleo.</p>
-
-            <img class="servicoImagem" src="assets/icon_urbanism.svg" alt="">
-            <h3>Urbanismo e Infraestrutura</h3>
-            <p>Monitoramento da expansão urbana, planejamento de infraestrutura de mobilidade e análise do microclima urbano.</p>
-        </div>
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_geospatialCharacterization.svg" alt="">
+                    <h3>Caracterização Geoespacial</h3>
+                    <p>Precipitação, temperatura, relevo, declive, hipsometria, DEM e séries temporais.</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_mineralExploration.svg" alt="">
+                    <h3>Exploração Mineral</h3>
+                    <p>Análises espectrais, PCA, ICA, índices minerais e métodos supervisionados e não supervisionados.</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_hydrographicStudies.svg" alt="">
+                    <h3>Estudos Hidrográficos</h3>
+                    <p>Delimitação de bacias hidrográficas, estudos de escoamento, análise de drenagem e detecção de áreas propensas a inundações.</p>
+                </div>    
+                    
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_enviromental.svg" alt="">
+                    <h3>Monitoramento Ambiental</h3>
+                    <p>Monitoramento de desmatamento, detecção de incêndios florestais, análise de erosão costeira e detecção de derramamentos de óleo.</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_urbanism.svg" alt="">
+                    <h3>Urbanismo e Infraestrutura</h3>
+                    <p>Monitoramento da expansão urbana, planejamento de infraestrutura de mobilidade e análise do microclima urbano.</p>
+                </div>
+            </div>
+            <button class="carousel-control next" aria-label="Próximo"><i class="bi bi-arrow-right-circle"></i></button>
+        </div>         
 
         
     </main>
     
 </body>
 </html>
-=======
+
 <body>     
     <header>
         <img src="assets/sideLogo.png" alt="sideLogo">
