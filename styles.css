@@ -59,7 +59,7 @@ nav{
 
 .link{
     text-decoration: none;
-    color: #fffffd;
+    color: #ffffff;
     margin: 20px;
 }
 
@@ -300,67 +300,142 @@ nav{
 /* RODAPÉ*/
 .footer {
     background-color: #0b2a49; 
-    color: #fffffd; 
-    padding: 80px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
+    color: #fffffd;
+    padding: 30px 20px; 
+    text-align: center; 
 }
 
-/* Conteúdo do rodapé */
 .footer-content {
-    display: flex; /* Flexbox para organizar as seções */
-    justify-content: space-between; /* Espaço entre as seções */
-    gap: 30px; /* Espaçamento entre as seções */
-    flex-wrap: wrap; /* Permite ajustar em telas menores */
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px; 
+    flex-wrap: wrap;
 }
 
-/* Estilo para cada seção do rodapé */
 .footer-section {
-    flex: 1; /* Cada seção ocupa o espaço disponível */
-    max-width: 300px; /* Limita a largura máxima */
+    flex: 1; 
+    max-width: 300px; 
 }
 
-/* Títulos dentro do rodapé */
 .footer-section h3 {
-    font-size: 1.5rem; /* Tamanho do título */
-    color: #fffffd; /* Branco */
-    margin-bottom: 15px; /* Espaçamento inferior */
+    font-size: 1.5rem; 
+    color: #ffbf00; 
+    margin-bottom: 15px; 
 }
 
-/* Lista de links do rodapé */
 .footer-section ul {
-    list-style: none; /* Remove os marcadores de lista */
+    list-style: none; 
 }
 
 .footer-section ul li {
-    margin-bottom: 10px; /* Espaçamento entre os itens */
+    margin-bottom: 10px; 
 }
 
-/* Estilo dos links do rodapé */
 .footer-section ul li a {
-    color: #76dfff; /* Azul Claro */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: color 0.3s ease; /* Transição suave na cor do link */
+    color: #76dfff; 
+    text-decoration: none; 
+    transition: color 0.3s ease;
 }
 
-/* Efeito hover nos links do rodapé */
 .footer-section ul li a:hover {
-    color: #3495c8; /* Azul Mediano */
+    color: #3495c8; 
 }
 
-/* Linha divisória do rodapé */
+.footer-section p{
+    text-align: justify;
+}
+
 .footer-divider {
-    margin: 30px 0; /* Espaçamento superior e inferior */
-    border-top: 1px solid #3495c8; /* Azul Mediano */
+    margin: 30px 0; 
+    border-top: 1px solid #3495c8; 
 }
 
-/* Rodapé inferior */
 .footer-bottom {
-    /* background-color: #0b2a49; Azul Escuro */
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 10px 20px; 
 }
 
-/* Texto do rodapé inferior */
 .footer-bottom p {
-    font-size: 1rem; /* Tamanho do texto */
-    color: #fffffd; /* Branco */
+    font-size: 1rem; 
+    color: #fffffd;
+}
+
+/* DarkMode geral */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Fundo escuro para áreas principais */
+body.dark-mode{
+    background-image: url(assets/backgroundImageNimbusLightModeWhite.webp);
+
+}
+
+/* Textos primários */
+body.dark-mode .inicio h1,
+body.dark-mode .sobre h2,
+body.dark-mode .carousel-container h1,
+body.dark-mode .contato-section h2,
+body.dark-mode .footer-section h3 {
+    color: #0b2a49;
+}
+
+/* Textos secundários */
+body.dark-mode .inicio p,
+body.dark-mode .sobre p,
+body.dark-mode .carousel-item h3,
+body.dark-mode .carousel-item p,
+body.dark-mode .footer-section p,
+body.dark-mode .footer-bottom p,
+body.dark-mode .contato-info h3,
+body.dark-mode .contato-formulario label {
+    color:#011f30;
+}
+
+/* Botão do formulário */
+body.dark-mode .contato-formulario button {
+    background-color: #0b2a49;
+    color: #fff;
+    border: 2px solid #3495c8;
+}
+
+body.dark-mode .contato-formulario button:hover {
+    background-color: #1a6a92; 
+}
+
+/* background*/
+body.dark-mode .link{
+    color:#092846;
+}
+
+body.dark-mode .menuLinks li a:hover{
+    color: #0307ff;
+} 
+
+body.dark-mode .menuLogo{
+    background-color: #3495c8;
+    border-radius:12px;
+    width: 127px;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+body.dark-mode .darkMode{
+    background-color:#3754f7e3 ;
+    color: #ffbf00;
+}
+
+body.dark-mode .darkMode:hover{
+    cursor:pointer;
+    background-color: #2051bb;
+}
+
+body.dark-mode .sobre,
+body.dark-mode .carousel-container,
+body.dark-mode .contato-section{
+    background-color: transparent;
+}
+
+body.dark-mode .footer{
+    background-color: #757575;
 }
