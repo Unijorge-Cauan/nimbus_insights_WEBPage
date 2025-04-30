@@ -1,9 +1,348 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Playwrite+AU+SA:wght@291&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
 body{
     background-image: url(assets/backgroundImageNimbus.png);
+    color: black;
+}
+
+main{
+    background-color: #0b2a496b;
+}
+
+header{
+    background: url(assets/backgroundImageNimbus.png);
+    background-size: cover;
+    background-position: center;
+    height: 715px;
 }
 
 header .img{
     width: 150px;
     height: 100px;
 
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuLogo{
+    width: 112px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+.menuLinks{
+    display: flex;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.menuLinks :hover{
+    /* display: flex; */
+    background-color: #fffffd;
+    color: #0b2a49;
+    margin-right: 5px;
+    margin-top: 10px;
+} /*ver o hover*/
+
+.link{
+    text-decoration: none;
+    color: #fffffd;
+    margin: 20px;
+}
+
+
+.menuToggle{
+    width: 32px;
+    height: 30px;
+    background-color:#3495c8;
+    color: #76dfff;
+    border-radius: 25px;
+    border-color: #3495c8;
+} /*deixar transparente*/
+
+.inicio h1{
+    color: #ffbf00;
+    margin-top: 260px;
+    margin-left: 100px;
+    font-size: 100px;
+}
+
+.inicio p{
+    color: #fffffd;
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+.sobre{
+    /* border: 2px red solid; */
+    display: flex;
+    height:100%;
+    padding: 40px;
+    align-items: center;
+    background-color: #0b2a499d;
+}
+
+.sobreConteudo{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.sobre h2{
+
+    color: #ffbf00;
+    font-size: 55px;
+    text-align: center;
+}
+
+.sobre p{
+    color: #fffffd;
+    font-size: 30px;
+    
+}
+
+.servicoImagem{
+    width: 50px;
+    height: 100px;
+}
+
+
+
+/* CARROSSEL */
+.carousel-container {
+    /* border: 2px solid red; */
+    position: relative;
+    overflow: hidden;
+    background-color: #0b2a499d;
+    margin: 0 auto;
+    gap:25px
+}
+
+.carousel-container h1{
+    color:#ffbf00;
+    font-size: 55px;
+    text-align: center;
+
+}
+  
+.carousel-slides {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+  
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-item h3{
+    color:white;
+}
+
+.carousel-item p{
+    color: white;
+}
+
+.carousel-item img{
+    width: 150px;
+    height: 150px;
+}
+
+.carousel-control {
+    position: relative;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffbf00; 
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #0b2a49;            
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.carousel-control:hover {
+    opacity: 1;
+}
+
+.carousel-control.prev {
+    border: 2px red solid;
+    left: 450px;
+}
+
+.carousel-control.next {
+    right: 450px;
+}
+
+/* CONTATO */
+.contato-section {
+    background-color: #0b2a499d;
+    /* padding: 50px 20px;  */
+    text-align: center;
+}
+
+.contato-section h2 {
+    font-size: 55px; 
+    color: #ffbf00; 
+    margin-bottom: 30px;
+}
+
+.contato-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* FORMULÁRIO CONTATO */
+.contato-formulario {
+    flex: 1; 
+    max-width: 650px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contato-info h3 {
+    font-size: 1.5rem;
+    color: #0b2a49; 
+    margin-bottom: 15px;
+}
+
+.contato-formulario label {
+    display: block;
+    font-weight: bold; 
+    color: #0b2a49; 
+    margin-top: 10px;
+}
+
+.contato-formulario input, .contato-formulario select, .contato-formulario textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 15px;
+    border: 2px solid #3495c8;
+    border-radius: 15px;
+    font-size: 1rem;
+    display: block; 
+}
+
+.contato-formulario input:focus, .contato-formulario textarea:focus {
+    border-color: #3495c8; 
+}
+
+.contato-formulario button {
+    background-color: #3495c8;
+    color: #fffffd; 
+    padding: 12px 25px;
+    border: 2px solid #0b2a49; 
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.contato-formulario button:hover {
+    background-color: #134e6b; 
+}
+
+.contato-info {
+    padding: 20px; 
+    width: 100%; 
+    max-width: 650px; 
+}
+
+.contato-info h3 {
+    font-size: 1.5rem; 
+    color: #0b2a49; 
+    margin-bottom: 5px; 
+}
+
+.contato-info p {
+    font-size: 1rem;
+    color: #0b2a49; 
+    margin-bottom: 5px;
+}
+
+/* RODAPÉ*/
+.footer {
+    background-color: #0b2a49; /* Azul Escuro */
+    color: #fffffd; /* Branco */
+    padding: 30px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Conteúdo do rodapé */
+.footer-content {
+    display: flex; /* Flexbox para organizar as seções */
+    justify-content: space-between; /* Espaço entre as seções */
+    gap: 30px; /* Espaçamento entre as seções */
+    flex-wrap: wrap; /* Permite ajustar em telas menores */
+}
+
+/* Estilo para cada seção do rodapé */
+.footer-section {
+    flex: 1; /* Cada seção ocupa o espaço disponível */
+    max-width: 300px; /* Limita a largura máxima */
+}
+
+/* Títulos dentro do rodapé */
+.footer-section h3 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #fffffd; /* Branco */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Lista de links do rodapé */
+.footer-section ul {
+    list-style: none; /* Remove os marcadores de lista */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links do rodapé */
+.footer-section ul li a {
+    color: #76dfff; /* Azul Claro */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave na cor do link */
+}
+
+/* Efeito hover nos links do rodapé */
+.footer-section ul li a:hover {
+    color: #3495c8; /* Azul Mediano */
+}
+
+/* Linha divisória do rodapé */
+.footer-divider {
+    margin: 30px 0; /* Espaçamento superior e inferior */
+    border-top: 1px solid #3495c8; /* Azul Mediano */
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    /* background-color: #0b2a49; Azul Escuro */
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+/* Texto do rodapé inferior */
+.footer-bottom p {
+    font-size: 1rem; /* Tamanho do texto */
+    color: #fffffd; /* Branco */
 }
