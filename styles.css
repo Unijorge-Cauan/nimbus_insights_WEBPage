@@ -1,0 +1,254 @@
+<<<<<<< Updated upstream
+=======
+/* Resetando algumas margens e padding padrões */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo de largura e altura */
+}
+
+/* Estilo do Corpo (body) */
+body {
+    font-family: 'Montserrat', sans-serif; /* Define a fonte do corpo do texto para Montserrat */
+    background-color: #fffffd; /* Define o fundo como branco no modo claro */
+    color: #0b2a49; /* Define a cor do texto como azul escuro */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves para as mudanças de cor no tema */
+}
+
+/* Estilo da barra de navegação (navbar) */
+.navbar {
+    display: flex; /* Usamos flexbox para organizar os itens em linha */
+    justify-content: space-between; /* Distribui os itens de forma que fiquem afastados um do outro */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #0b2a49; /* Cor de fundo da navbar em azul escuro */
+    padding: 10px 20px; /* Espaçamento interno da navbar */
+    margin-bottom: 30px; /* Espaço abaixo da navbar para separar as seções */
+}
+
+/* Estilo da logo na navbar */
+.navbar .logo img {
+    width: 120px; /* Define o tamanho da logo */
+    margin-right: 800px; /* Espaço maior entre a logo e os links */
+}
+
+/* Estilo dos links da navbar */
+.nav-links {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os itens de forma horizontal */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Adiciona um espaçamento entre os itens da navbar */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #fffffd; /* Cor dos links em branco */
+    font-size: 1rem; /* Define o tamanho da fonte dos links */
+    font-weight: 600; /* Aplica um peso de fonte mais grosso (negrito) */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Adiciona uma transição suave nas mudanças de cor e sublinhado */
+}
+
+.nav-links a:hover {
+    color: #3495c8; /* Muda a cor dos links para azul mediano quando o mouse passa por cima */
+    text-decoration: underline; /* Adiciona o sublinhado quando o mouse passa sobre o link */
+}
+
+
+
+
+
+
+/* Estilo do botão de alternância (modo claro/escuro) */
+.theme-btn {
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    color: #fffffd; /* Cor do ícone do botão em branco */
+    font-size: 1.5rem; /* Define o tamanho do ícone */
+    cursor: pointer; /* Torna o cursor como uma mãozinha para indicar interatividade */
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #0b2a49; /* Fundo azul escuro no modo escuro */
+    color: #fffffd; /* Cor do texto em branco no modo escuro */
+}
+
+body.dark-mode .navbar {
+    background-color: #3495c8; /* Cor de fundo da navbar em azul mediano no modo escuro */
+}
+
+
+/* Estilo para a seção de contato */
+.contato-section {
+    background-color: #f4f4f4; /* Cor de fundo suave para a seção de contato */
+    padding: 50px 20px; /* Espaçamento interno da seção */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Título da seção de contato */
+.contato-section h2 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #0b2a49; /* Azul Escuro */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Estilo do conteúdo dentro da seção de contato (formulário e informações) */
+.contato-content {
+    display: flex; /* Usamos flexbox para exibir os elementos lado a lado */
+    justify-content: space-between; /* Espaça igualmente os itens */
+    gap: 30px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+}
+
+/* Estilo para o formulário de contato */
+.contato-formulario {
+    background-color: #fffffd; /* Fundo branco para o formulário */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    flex: 1; /* O formulário ocupa o espaço disponível */
+    max-width: 700px; /* Define uma largura máxima para o formulário */
+    width: 100%; /* Faz o formulário ocupar 100% da largura disponível, até o limite do max-width */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+}
+
+/* Estilo dos títulos dentro do formulário e da seção de informações */
+.contato-formulario h3, .contato-info h3 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #0b2a49; /* Azul Escuro */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estilo para os campos do formulário */
+.contato-formulario label {
+    display: block; /* Coloca o rótulo em bloco */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #0b2a49; /* Azul Escuro */
+    margin-top: 10px; /* Espaçamento superior */
+    text-align: left; /* Alinha o texto do label à esquerda */
+}
+/* Estilo para os campos de entrada e botão do formulário */
+.contato-formulario input, .contato-formulario select, .contato-formulario textarea {
+     width: 100%; /* Faz os campos ocuparem toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaçamento superior */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    display: block; /* Garante que os campos ocupem a linha inteira */
+}
+
+/* Estilo para os campos em foco */
+.contato-formulario input:focus, .contato-formulario textarea:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #3495c8; /* Borda azul mediano ao focar */
+}
+
+/* Estilo para o botão de envio do formulário */
+.contato-formulario button {
+    background-color: #3495c8; /* Azul Mediano */
+    color: #fffffd; /* Cor do texto do botão */
+    padding: 12px 25px; /* Tamanho do botão */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito hover no botão */
+.contato-formulario button:hover {
+    background-color: #1e75a1; /* Cor mais escura no hover */
+}
+
+/* Estilo para as informações de contato */
+.contato-info {
+    padding: 20px; /* Espaçamento interno */
+    width: 100%; /* Faz a seção ocupar 100% da largura do container */
+    max-width: 650px; /* Define uma largura máxima para a seção */
+}
+
+/* Ajustando o espaçamento entre os títulos dentro da seção de informações */
+.contato-info h3 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #0b2a49; /* Azul Escuro */
+    margin-bottom: 5px; /* Distância entre título e conteúdo */
+}
+
+/* Ajustando o espaçamento entre os parágrafos dentro da seção de informações */
+.contato-info p {
+    font-size: 1rem; /* Tamanho do texto */
+    color: #0b2a49; /* Azul Escuro */
+    margin-bottom: 5px; /* Distância entre os parágrafos */
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: #0b2a49; /* Azul Escuro */
+    color: #fffffd; /* Branco */
+    padding: 30px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Conteúdo do rodapé */
+.footer-content {
+    display: flex; /* Flexbox para organizar as seções */
+    justify-content: space-between; /* Espaço entre as seções */
+    gap: 30px; /* Espaçamento entre as seções */
+    flex-wrap: wrap; /* Permite ajustar em telas menores */
+}
+
+/* Estilo para cada seção do rodapé */
+.footer-section {
+    flex: 1; /* Cada seção ocupa o espaço disponível */
+    max-width: 300px; /* Limita a largura máxima */
+}
+
+/* Títulos dentro do rodapé */
+.footer-section h3 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #fffffd; /* Branco */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Lista de links do rodapé */
+.footer-section ul {
+    list-style: none; /* Remove os marcadores de lista */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links do rodapé */
+.footer-section ul li a {
+    color: #76dfff; /* Azul Claro */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave na cor do link */
+}
+
+/* Efeito hover nos links do rodapé */
+.footer-section ul li a:hover {
+    color: #3495c8; /* Azul Mediano */
+}
+
+/* Linha divisória do rodapé */
+.footer-divider {
+    margin: 30px 0; /* Espaçamento superior e inferior */
+    border-top: 1px solid #3495c8; /* Azul Mediano */
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    background-color: #0b2a49; /* Azul Escuro */
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+/* Texto do rodapé inferior */
+.footer-bottom p {
+    font-size: 1rem; /* Tamanho do texto */
+    color: #fffffd; /* Branco */
+}
+>>>>>>> Stashed changes
