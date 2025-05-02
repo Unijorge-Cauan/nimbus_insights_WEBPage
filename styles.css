@@ -1,45 +1,64 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Playwrite+AU+SA:wght@291&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
 }
 
-body{
-    background-image: url(assets/backgroundImageNimbus.png);
+body {
     color: black;
+    background-image: url(assets/backgroundImageNimbus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-main{
-    background-color: #0b2a496b;
+main {
+    /* background-color: #0b2a496b; */
+    padding-top: 120px; /* compensar navbar fixa */
 }
 
-header{
-    height: 715px;
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-header .img{
+header .img {
     width: 150px;
     height: 100px;
-
 }
 
-nav{
+nav {
+    background-color: rgba(0, 0, 0, 0.356);
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    padding-right: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
 }
 
-.menuLogo{
+nav ul {
+    margin-left: 53%;
+}
+
+.menuLogo {
+    display: flex;
+    justify-self: flex-start;
     width: 112px;
     height: 40px;
     margin-top: 10px;
     margin-left: 15px;
-
+    
 }
+
 .menuLinks {
     display: flex;
     padding: 8px;
@@ -47,118 +66,108 @@ nav{
     margin-top: 20px;
 }
 
-.menuLinks li a:hover{
+.menuLinks li a:hover {
     background-color: #3494c8a1;
     color: #ffffff;
     border-radius: 25px;
     padding: 8px;
     margin-right: 5px;
     margin-top: 20px;
-    transition: background-color 0.3s, transform 0.3s;    
-} 
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-.link{
+.link {
     text-decoration: none;
     color: #ffffff;
     margin: 20px;
 }
 
-.darkMode{
+.darkMode {
     margin-top: 20px;
     width: 32px;
     height: 30px;
-    background-color:#3494c83f;
+    background-color: #3494c83f;
     color: #76dfff;
     border-radius: 25px;
-    border-color: #3495c8;
-    margin-left: -630px;
+    border-color: #3495c8;    
+    z-index: 1001;
+    position: relative;
 }
 
-.darkMode:hover{
-    cursor:pointer;
+.darkMode:hover {
+    cursor: pointer;
     background-color: #134e6b;
 }
 
-
-.menuToggle{
+.menuToggle {
     border-radius: 25px;
     width: 32px;
     height: 30px;
     visibility: hidden;
 }
 
-.inicio h1{
+.inicio h1 {
     color: #ffbf00;
-    margin-top: 260px;
     margin-left: 100px;
     font-size: 100px;
 }
 
-.inicio p{
+.inicio p {
     color: #fffffd;
     margin-left: 100px;
     font-size: 30px;
 }
 
-.sobre{
-    /* border: 2px red solid; */
+.sobre {
     display: flex;
-    height:100%;
+    height: 100%;
     padding: 40px;
     align-items: center;
-    background-color: #0b2a499d;
 }
 
-.sobreConteudo{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-
+.sobreConteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.sobre h2{
-
+.sobre h2 {
     color: #ffbf00;
     font-size: 55px;
     text-align: center;
 }
 
-.sobre p{
+.sobre p {
     color: #fffffd;
     font-size: 30px;
-    
 }
 
-.servicoImagem{
+.servicoImagem {
     width: 50px;
     height: 100px;
 }
 
-
-
-/* CARROSSEL */
 .carousel-container {
-    /* border: 2px solid red; */
     padding-top: 120px;
     position: relative;
-    overflow: hidden;
-    background-color: #0b2a499d;
+    overflow: hidden; 
     margin: 0 auto;
-    gap:25px
+    gap: 25px;
 }
 
-.carousel-container h1{
-    color:#ffbf00;
+.carousel-container h1 {
+    color: #ffbf00;
     font-size: 55px;
     text-align: center;
-
 }
-  
+
 .carousel-slides {
     display: flex;
     transition: transform 0.4s ease;
+    will-change: transform;
+    touch-action: pan-y;
 }
-  
+
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
@@ -166,32 +175,36 @@ nav{
     text-align: center;
 }
 
-.carousel-item h3{
-    color:white;
-}
-
-.carousel-item p{
+.carousel-item h3,
+.carousel-item p {
     color: white;
 }
 
-.carousel-item img{
+.carousel-item .servicoImagem {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: contain;
+  }
+  
+.carousel-item img {
     width: 150px;
     height: 150px;
 }
-
 .carousel-control {
     margin-top: 30px;
     width: 40px;
     height: 40px;
-    position: relative;
-    z-index: 10;
     position: absolute;
     top: 50%;
-    background-color: #ffbf00; 
+    background-color: #ffbf00;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #0b2a49;            
+    color: #0b2a49;
     border-radius: 50px;
+    z-index: 10;
+    pointer-events: auto;
 }
 
 .carousel-control:hover {
@@ -209,7 +222,6 @@ nav{
 /* CONTATO */
 .contato-section {
     padding-top:150px;
-    background-color: #0b2a499d;
     text-align: center;
 }
 
@@ -408,6 +420,18 @@ body.dark-mode .link{
     color:#092846;
 }
 
+body.dark-mode nav {
+    background-color: rgba(255, 255, 255, 0.774);
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
 body.dark-mode .menuLinks li a:hover{
     color: #0307ff;
 } 
@@ -438,4 +462,152 @@ body.dark-mode .contato-section{
 
 body.dark-mode .footer{
     background-color: #757575;
+}
+
+
+
+
+
+/* Responsividade para telas pequenas*/
+@media (max-width: 768px) {
+
+header {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menuLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    width: 100%;
+}
+  
+.menuLinks li {
+    width: 100%;
+    text-align: center;
+}
+  
+.inicio h1 {
+    font-size: 48px;
+    margin-left: 20px;
+    margin-top: 120px;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.sobre {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sobre p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.carousel-container h1,
+.contato-section h2 {
+    font-size: 32px;
+}
+
+.carousel-item h3,
+.carousel-item p {
+    font-size: 18px;
+}
+
+.contato-formulario {
+    padding: 20px;
+}
+
+.footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    max-width: 100%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+  /* Regra global para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+  /* Ajustes específicos */
+.menuLogo {
+    width: 112px;
+    height: auto;
+}
+  
+  /* Adicionar: tornar responsivo */
+.sobreLogo {
+    max-width: 200px;
+    height: auto;
+}
+
+.servicoImagem {
+    width: 80px;
+    height: auto;
+}
+
+.carousel-item img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+.menuLinks {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.menuLinks.show {
+    display: flex;
+}
+
+.menuToggle {
+    visibility: visible;
+    background-color: transparent;
+    position:absolute;
+    right:20px;
+    top:20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 28px;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: auto;
+}
+
+
+
 }
